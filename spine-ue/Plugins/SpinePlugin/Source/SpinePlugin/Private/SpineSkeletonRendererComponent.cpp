@@ -29,7 +29,9 @@
 
 #include "SpineSkeletonRendererComponent.h"
 
+#include "Runtime/Launch/Resources/Version.h"
 #include "SpineAtlasAsset.h"
+#include "Engine/World.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "spine/spine.h"
 #include "UObject/ConstructorHelpers.h"

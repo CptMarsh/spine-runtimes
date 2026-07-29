@@ -30,6 +30,8 @@
 #pragma once
 
 // clang-format off
+#include "Runtime/Launch/Resources/Version.h"
+#include "Engine/DataAsset.h"
 #include "Engine/Texture2D.h"
 #include "spine/spine.h"
 #include "SpineAtlasAsset.generated.h"
@@ -42,7 +44,7 @@ class SPINEPLUGIN_API USpineAtlasAsset : public UPrimaryDataAsset {
 public:
 	spine::Atlas *GetAtlas();
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spine")
 	TArray<UTexture2D *> atlasPages;
 
 	void SetRawData(const FString &RawData);

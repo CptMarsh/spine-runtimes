@@ -30,6 +30,7 @@
 #pragma once
 
 // clang-format off
+#include "Runtime/Launch/Resources/Version.h"
 #include "spine/spine.h"
 #include "SpineSkeletonDataAsset.generated.h"
 // clang-format on
@@ -39,13 +40,13 @@ struct SPINEPLUGIN_API FSpineAnimationStateMixData {
 	GENERATED_BODY();
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spine")
 	FString From;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spine")
 	FString To;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spine")
 	float Mix = 0;
 };
 
@@ -65,25 +66,25 @@ public:
 
 	virtual void BeginDestroy() override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spine")
 	float DefaultMix = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spine")
 	TArray<FSpineAnimationStateMixData> MixData;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Spine")
 	TArray<FString> Bones;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Spine")
 	TArray<FString> Slots;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Spine")
 	TArray<FString> Skins;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Spine")
 	TArray<FString> Animations;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, Category = "Spine")
 	TArray<FString> Events;
 
 protected:

@@ -54,19 +54,19 @@ public:
 		this->Time = event->getTime();
 	}
 
-	UPROPERTY(BlueprintReadonly)
+	UPROPERTY(BlueprintReadonly, Category = "Spine")
 	FString Name;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "Spine")
 	FString StringValue;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "Spine")
 	int IntValue;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "Spine")
 	float FloatValue;
 
-	UPROPERTY(BlueprintReadOnly)
+	UPROPERTY(BlueprintReadOnly, Category = "Spine")
 	float Time;
 };
 

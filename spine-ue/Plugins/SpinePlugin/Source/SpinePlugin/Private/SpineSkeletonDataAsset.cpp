@@ -28,6 +28,8 @@
  *****************************************************************************/
 
 #include "SpineSkeletonDataAsset.h"
+#include "Runtime/Launch/Resources/Version.h"
+#include "Misc/Paths.h"
 #include "EditorFramework/AssetImportData.h"
 #include "Runtime/Core/Public/Misc/MessageDialog.h"
 #include "SpinePlugin.h"

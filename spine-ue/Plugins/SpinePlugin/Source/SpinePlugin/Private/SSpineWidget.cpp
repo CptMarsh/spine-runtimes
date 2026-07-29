@@ -56,7 +56,7 @@ struct SpineSlateMaterialBrush : public FSlateBrush {
 		FScopeLock Lock(&NamePoolLock);
 
 		if (NamePool.Num() > 0) {
-			ResourceName = NamePool.Pop(false);
+			ResourceName = NamePool.Pop(EAllowShrinking::No);
 		} else {
 			static uint32 NextId = 0;
 			FString brushName = TEXT("SpineSlateMatBrush");

@@ -28,6 +28,7 @@
  *****************************************************************************/
 
 #include "SpineAtlasAsset.h"
+#include "Runtime/Launch/Resources/Version.h"
 #include "spine/spine.h"
 #include <string.h>
 #include <string>

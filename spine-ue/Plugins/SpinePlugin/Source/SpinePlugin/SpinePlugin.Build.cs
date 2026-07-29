@@ -9,6 +9,10 @@ namespace UnrealBuildTool.Rules
 		{
 			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
+			// spine-cpp does `using namespace spine;` at global scope, so unity-merging it with
+			// the UE glue makes EventData ambiguous (spine::EventData vs UE's global EventData).
+			bUseUnity = false;
+
 			PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public"));
 			PublicIncludePaths.Add(Path.Combine(ModuleDirectory, "Public/spine-cpp/include"));
 
